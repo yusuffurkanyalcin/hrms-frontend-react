@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Container, Icon, Menu } from "semantic-ui-react";
 import SignedIn from "./SignedIn";
 import SignedOut from "./SignedOut";
 
 export default function Navigation() {
-  const [isSigned, setIsSigned] = useState(true);
+  const isSigned=true;
+
+ 
   return (
     <div>
       <Menu size="large">
