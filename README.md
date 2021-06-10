@@ -1,6 +1,6 @@
-# Canlı görmek için  
+# Canlı görmek için  <a href="https://compassionate-archimedes-cbfff4.netlify.app/">Tıklayınız...</a>
 
-<a href="https://compassionate-archimedes-cbfff4.netlify.app/">Tıklayınız...</a>
+
 
 # UML Component Diagram
 
