@@ -1,3 +1,7 @@
+# Canlı görmek için  
+
+<a href="https://compassionate-archimedes-cbfff4.netlify.app/">Tıklayınız...</a>
+
 # UML Component Diagram
 
 ![ReactDiagram](https://user-images.githubusercontent.com/55233993/121590494-0b86ca00-ca41-11eb-825b-4d904b76140d.png)
