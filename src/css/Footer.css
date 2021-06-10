@@ -1,0 +1,8 @@
+.ui.footer{
+    
+    display: flex;
+  justify-content: space-around;
+}
+.ui.active{
+    margin-bottom: 5px;
+}

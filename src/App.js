@@ -1,13 +1,16 @@
 import "./App.css";
-import Dashborad from "./layouts/Dashborad";
 
 import "semantic-ui-css/semantic.min.css";
+import Navigation from "./layouts/Navigation";
+import Home from "./pages/Home";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Dashborad/>
-      Selam
+      <Navigation/>
+      <Home/>
+      <Footer/>
     </div>
   );
 }
