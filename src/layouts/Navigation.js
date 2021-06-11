@@ -4,12 +4,11 @@ import SignedIn from "./SignedIn";
 import SignedOut from "./SignedOut";
 
 export default function Navigation() {
-  const isSigned=true;
+  const isSigned = true;
 
- 
   return (
     <div>
-      <Menu size="large">
+      <Menu inverted size="large">
         <Container>
           <Menu.Menu position="left">
             <Menu.Item content="HRMS.net" style={{ color: "orange" }} />
@@ -20,10 +19,10 @@ export default function Navigation() {
             icon={<Icon name="search" inverted circular link />}
           ></Menu.Item>
           <Menu.Item>
-            <Button content="Kariyer Rehberi" basic color="black" />
+            <Button content="Kariyer Rehberi" secondary />
           </Menu.Item>
           <Menu.Item>
-            <Button content="Pozisyon Rehberi" basic color="black" />
+            <Button content="Pozisyon Rehberi" secondary />
           </Menu.Item>
           <Menu.Menu position="right">
             {isSigned ? <SignedIn /> : <SignedOut />}
