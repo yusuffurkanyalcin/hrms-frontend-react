@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
-//import JobAdvertisementService from "../services/jobAdvertisementService";
+import JobAdvertisementService from "../services/jobAdvertisementService";
 import JobService from "../services/jobService";
 import CityService from "../services/cityService";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/AddJobAdvertisement.css";
-import { Container,Button,Icon } from "semantic-ui-react";
+import { Container, Button, Icon } from "semantic-ui-react";
 
 export default function AddJobAdvertisement() {
-  //let jobAdvertisementService = new JobAdvertisementService();
+  let jobAdvertisementService = new JobAdvertisementService();
   const [cities, setcities] = useState([]);
   const [jobTitles, setJobTitles] = useState([]);
   useEffect(() => {
@@ -19,19 +19,18 @@ export default function AddJobAdvertisement() {
   }, []);
   const formik = useFormik({
     initialValues: {
-      
-      createdDate: String(Date.now()),
-      employerId: 0,
+      createdDate: new Date().toISOString().slice(0, 10),
+      employerId: 10,
       lastApplicationDate: "",
       positionSize: 0,
-      positionSummary: "",
-      workTimeType: "",
-      workType: "",
     },
     onSubmit: (values) => {
-      //   jobAdvertisementService.add(values).then((result) => {
-      //     alert(result.data.message);
-      //   });
+      values.jobTitleId = parseInt(values.jobTitleId);
+      values.cityId = parseInt(values.cityId);
+
+      jobAdvertisementService.add(values).then((result) => {
+        alert(result.data.message);
+      });
       console.log(JSON.stringify(values));
     },
   });
@@ -54,7 +53,6 @@ export default function AddJobAdvertisement() {
                   aria-label="Default select example"
                   id="cityId"
                   onChange={formik.handleChange}
-                  
                 >
                   <option defaultValue=""> Şehir Seçin</option>
                   {cities.map((c) => (
@@ -65,10 +63,7 @@ export default function AddJobAdvertisement() {
                 </select>
               </div>
               <div className="col-lg-5 col-md-5 col-sm-5">
-                <label
-                  htmlFor="jobTitleId"
-                  className="jobTitleId-select-label"
-                >
+                <label htmlFor="jobTitleId" className="jobTitleId-select-label">
                   İş Pozisyonu
                 </label>
                 <select
@@ -88,16 +83,13 @@ export default function AddJobAdvertisement() {
             </div>
             <div className="row ">
               <div className="col-lg-5 col-md-5 col-sm-5">
-                <label
-                  htmlFor="worktype-select"
-                  className="worktype-select-label"
-                >
+                <label htmlFor="worktype" className="worktype-select-label">
                   Çalışma Türü
                 </label>
                 <select
                   className="form-select"
                   aria-label="Default select example"
-                  id="worktype-select"
+                  id="workType"
                   onChange={formik.handleChange}
                 >
                   <option defaultValue=""> İş Türü Seçiniz</option>
@@ -111,7 +103,7 @@ export default function AddJobAdvertisement() {
               </div>
               <div className="col-lg-5 col-md-5 col-sm-5">
                 <label
-                  htmlFor="worktimetype-select"
+                  htmlFor="workTimeType"
                   className="worktimetype-select-label"
                 >
                   Çalışma Zamanı
@@ -119,7 +111,7 @@ export default function AddJobAdvertisement() {
                 <select
                   className="form-select"
                   aria-label="Default select example"
-                  id="worktimetype-select"
+                  id="workTimeType"
                   onChange={formik.handleChange}
                 >
                   <option defaultValue=""> Çalışma Zamanı Seçiniz</option>
@@ -166,14 +158,16 @@ export default function AddJobAdvertisement() {
               <textarea
                 className="form-control"
                 placeholder="İlan Detayları..."
-                id="floatingTextarea"
+                id="positionSummary"
                 onChange={formik.handleChange}
-                style={{minHeight:150}}
+                style={{ minHeight: 150 }}
               ></textarea>
-              <label htmlFor="floatingTextarea">İlan detayları...</label>
+              <label htmlFor="positionSummary">İlan detayları...</label>
             </div>
-            <Button positive floated="right" style={{marginRight:30}} ><Icon name="plus"/>İlan Oluştur</Button>
-            
+            <Button positive floated="right" style={{ marginRight: 30 }}>
+              <Icon name="plus" />
+              İlan Oluştur
+            </Button>
           </form>
         </div>
       </Container>

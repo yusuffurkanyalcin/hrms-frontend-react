@@ -11,7 +11,7 @@ export default function Navigation() {
       <Menu inverted size="large">
         <Container>
           <Menu.Menu position="left">
-            <Menu.Item content="HRMS.net" style={{ color: "orange" }} />
+            <Menu.Item content="HRMS.NET" style={{ color: "orange" }} />
           </Menu.Menu>
 
           <Menu.Item
