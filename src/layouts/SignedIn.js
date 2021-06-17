@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown, Icon, Image, Menu } from "semantic-ui-react";
+import { Dropdown, Image, Menu } from "semantic-ui-react";
 
 export default function SignedIn() {
   return (
@@ -16,8 +16,8 @@ export default function SignedIn() {
           className="link item"
         >
           <Dropdown.Menu>
-            <Dropdown.Item icon={<Icon name="info" />} text="Bilgilerim" />
-            <Dropdown.Item icon={<Icon name="sign out" />} text="Çıkış Yap" />
+            <Dropdown.Item icon="info" text="Bilgilerim" />
+            <Dropdown.Item icon="sign out" text="Çıkış Yap" />
           </Dropdown.Menu>
         </Dropdown>
 

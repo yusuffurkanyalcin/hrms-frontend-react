@@ -2,13 +2,13 @@ import "./App.css";
 
 import "semantic-ui-css/semantic.min.css";
 import Navigation from "./layouts/Navigation";
-import AddJobAdvertisement from "./pages/AddJobAdvertisement";
+import ActiveJobAdvertisementList from "./layouts/ActiveJobAdvertisementList";
 
 function App() {
   return (
     <div className="App">
       <Navigation/>
-      <AddJobAdvertisement/>
+      <ActiveJobAdvertisementList/>
     </div>
   );
 }

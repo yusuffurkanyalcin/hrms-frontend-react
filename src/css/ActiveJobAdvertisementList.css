@@ -1,0 +1,14 @@
+.active-jobadvertisements {
+  margin-top: 2%;
+}
+h5 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.ui.card:hover {
+  border: 1px solid;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+
