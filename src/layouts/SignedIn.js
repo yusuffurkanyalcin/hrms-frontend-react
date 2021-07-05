@@ -22,7 +22,7 @@ export default function SignedIn() {
         </Dropdown>
 
         <Dropdown pointing="top right" text="İşlemlerim" className="link item">
-          <Dropdown.Menu>
+          <Dropdown.Menu >
             <Dropdown.Item text="İş Başvuru" />
           </Dropdown.Menu>
         </Dropdown>
