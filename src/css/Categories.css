@@ -1,0 +1,8 @@
+.list-group-item {
+  border-radius: 0.2rem;
+  text-align: start;
+  width:max-content;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: .1em;
+}

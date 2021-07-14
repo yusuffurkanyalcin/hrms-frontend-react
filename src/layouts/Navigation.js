@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Container, Icon, Menu } from "semantic-ui-react";
 import SignedIn from "./SignedIn";
 import SignedOut from "./SignedOut";
-
+import { NavLink } from "react-router-dom";
 export default function Navigation() {
   const isSigned = true;
 
@@ -11,7 +11,7 @@ export default function Navigation() {
       <Menu inverted size="large">
         <Container>
           <Menu.Menu position="left">
-            <Menu.Item content="HRMS.NET" style={{ color: "orange" }} />
+            <Menu.Item content="HRMS.NET"  as={NavLink} to="/"/>
           </Menu.Menu>
 
           <Menu.Item
