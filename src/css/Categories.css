@@ -6,3 +6,17 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: .1em;
 }
+.icon{
+  height: 35px !important;
+  width: 35px !important;
+  
+}
+.list-group-item-div{
+  width: 275.8px;
+}
+.ui.navlink{
+  text-decoration: none;
+  border: none;
+}
+
+
